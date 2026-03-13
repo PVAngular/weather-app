@@ -7,7 +7,7 @@
     "client": "cd client && yarn start",
     "server": "pm2 start pm2.config.js",
     "start": "cd client && yarn start",
-    "build": "cd client && yarn build"
+    "build": "cd client && yarn install && yarn build"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
