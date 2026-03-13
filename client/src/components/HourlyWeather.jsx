@@ -38,10 +38,11 @@ class HourlyWeather extends React.Component {
     fetchWeatherData = () => {
         const { locationInput, unitFahrenheit } = this.state;
         const unit = unitFahrenheit ? 'imperial' : 'metric';
+        const apiKey = process.env.REACT_APP_API_KEY;
         
         this.setState({ loading: true, error: null });
 
-        const url = `/forecasts/${encodeURIComponent(locationInput)}.${unit}`;
+        const url = `https://api.openweathermap.org/data/2.5/forecast?q=${encodeURIComponent(locationInput)}&units=${unit}&appid=${apiKey}`;
         
         window.fetch(url)
             .then(response => {
