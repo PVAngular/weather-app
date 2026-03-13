@@ -1,0 +1,190 @@
+.hourly-weather-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hourly-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 24px;
+}
+
+.location-form {
+    margin-bottom: 16px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.location-input {
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    max-width: 100%;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.location-input:focus {
+    border-color: #1a0dab;
+}
+
+.search-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #1a0dab;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.search-btn:hover:not(:disabled) {
+    background-color: #0f0875;
+}
+
+.search-btn:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+.unit-toggle {
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.unit-toggle .active {
+    color: #1a0dab;
+    font-weight: 600;
+}
+
+.error-message {
+    text-align: center;
+    color: #d32f2f;
+    background-color: #ffebee;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.weather-results {
+    margin-top: 24px;
+}
+
+.location-name {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.forecast-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.hourly-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.hourly-card {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    min-width: 140px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hourly-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.hourly-time {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a0dab;
+    margin-bottom: 8px;
+}
+
+.hourly-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.hourly-temp {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.temp-unit {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.hourly-desc {
+    font-size: 13px;
+    color: #666;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+}
+
+.hourly-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 11px;
+    color: #888;
+}
+
+.placeholder-message {
+    text-align: center;
+    color: #666;
+    font-size: 16px;
+    padding: 40px 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 600px) {
+    .input-group {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .location-input {
+        width: 100%;
+    }
+    
+    .search-btn {
+        width: 100%;
+    }
+    
+    .hourly-card {
+        min-width: 120px;
+    }
+}
